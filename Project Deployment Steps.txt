@@ -1,0 +1,18 @@
+#Django setUp
+    cd .../qr-web.link
+    pip install virtualenv
+    python3 -m virtualenv venv
+    source venv/bin/activate
+    pip install Django
+    python3 -m django startproject qrweb .
+
+#Export Project To GitHub
+    cd .../qr-web.                  #Create a new repository on GitHub and navigate to the root directory of project
+    git init                        #initialize the repository
+    git add .                       #to add all files to the repository
+    git commit -m "Initial commit"  #make the initial commit
+    git remote add origin https://github.com//RuslanKovalyov/qr-web.link    #connect the local repository to the remote repository on GitHub
+    git push -u origin master   #push the code to the remote repository
+
+
+
