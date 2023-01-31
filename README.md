@@ -11,14 +11,12 @@ So why wait? Start generating QR web links and web pages today and experience th
 
 
 Goals:
-
 1. Storing product instructions in the form of a small sticker, that cannot be lost or thrown away due to inconvenience.
 2. Reduce costs by minimizing or eliminating paper information booklets in products.
 3. Improve customer information by combining availability and completeness in an easy-to-use form.
 
 
 Use Cases:
-
   Product descriptions in the form of a small stamp on the back.
   Instant access to menus in restaurants.
   operation and maintenance manual is built into all equipment of the enterprise.
@@ -26,6 +24,9 @@ Use Cases:
   Countless new opportunities for small businesses.
 
 
-Example:
-	
+Example:	
 A craftsman has created a handmade Japanese knife and wants to provide use instructions. On the handle of the knife, next to the logo, there's a QR link to the sharpening guide for that specific model. The manual page and link are generated without the need for a website or server. As a bonus, the craftsman can advertise other products, include detailed information, contacts, and more on the micro page. And, importantly, pages for older products can be updated.
+
+
+PS:
+Our team is inspired and working diligently on the project, confident in its success. We understand the benefits of the service and are striving to develop it quickly.
