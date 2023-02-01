@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>QR-WEB.Link</title>
+    <style>
+      body {
+        background-color: #333; /* Dark gray background color */
+        display: flex;
+        flex-direction: column; /* Change layout to column */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        height: 100vh; /* 100% of viewport height */
+      }
+      img {
+        display: block;
+        margin: 0 auto; /* Center image horizontally */
+      }
+      a {
+        font-size: smaller;
+        color: black;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px; /* Add padding to the button */
+        background-color: lightgray; /* Light gray background color */
+        border-radius: 5px; /* Add border radius of 5px */
+        text-decoration: none; /* Remove underline from link */
+        width: 180px; /* Set width same as image */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="static/qr.png" alt="qr-web.link" width="200" height="200"/>
+    <a href="{% static 'qr.png' %}" download>Download QR</a>
+    <a href="{% url 'generate_qr' %}">Back to generator</a>
+  </body>
+</html>

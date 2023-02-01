@@ -4,7 +4,53 @@
     python3 -m virtualenv venv
     source venv/bin/activate
     pip install Django
+    pip install qrcode
+    pip install pillow  
     python3 -m django startproject qrweb .
+    python3 -m django startapp main
+
+#Hello qr-web.link
+
+    nano /home/ruslan/Desktop/PROJECT/PROJECT/settings.py
+		from pathlib import Path
+		import os
+
+		DEBUG = False
+		
+		ALLOWED_HOSTS = ['localhost', 'kov.link', 'www.kov.link']
+		CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://kov.link', 'https://www.kov.link']
+		
+		INSTALLED_APPS = [
+		  ...
+		  ...
+		  'main.apps.MainConfig',  
+		]
+		
+		STATIC_URL = 'static/'
+		STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+	
+	nano main/views.py
+		from django.http import HttpResponse
+		
+		def homePageView(request):
+		  return HttpResponse("Hello qr-web.link!")
+
+	nano main/urls.py
+		from django.urls import path
+		from .views import homePageView
+		
+		urlpatterns = [
+		    path("", homePageView, name="home"),
+		]
+	
+	nano PROJECT/urls.py
+		from django.contrib import admin
+		from django.urls import path, include
+		
+		urlpatterns = [
+		    path('admin/', admin.site.urls),
+		    path("", include("main.urls")),  
+		]
 
 #Export Project To GitHub
     cd .../qr-web.                  #Create a new repository on GitHub and navigate to the root directory of project
@@ -13,6 +59,9 @@
     git commit -m "Initial commit"  #make the initial commit
     git remote add origin https://github.com//RuslanKovalyov/qr-web.link    #connect the local repository to the remote repository on GitHub
     git push -u origin master   #push the code to the remote repository
+    
+#Import from GitHub
+    git clone https://github.com/RuslanKovalyov/qr-web.link
 
 
 

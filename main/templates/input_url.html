@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>QR-WEB.Link</title>
+    <style>
+      /* Minimal styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #333; /* Dark gray background color */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        height: 100vh; /* 100% of viewport height */
+      }
+      .center-div {
+        padding: 5px; /* Padding of 5px */
+        border-radius: 5px; /* Round edges with 5px radius */
+        width: max-content; /* Width determined by content */
+        text-align: center; /* Center content inside the div */
+      }
+      input[type="text"] {
+        font-size: smaller;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: white; /* White background color */
+        border-radius: 5px;
+        text-decoration: none;
+        width: 280px;
+      }
+      button {
+        font-size: smaller;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px; /* Add padding to the button */
+        background-color: yellow; /* Light gray background color */
+        border-radius: 5px; /* Add border radius of 5px */
+        text-decoration: none; /* Remove underline from link */
+        width: max-content; /* Set width same as image */
+      }
+      .error {
+        color: red;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-div">
+      <form method="post">
+        {% csrf_token %}
+        {% if error_message %}
+            <div class="error">{{ error_message }}</div>
+        {% endif %}
+        <input type="text" name="url" placeholder="Enter URL">
+        <button type="submit">Generate QR</button>
+      </form>
+    </div>
+  </body>
+</html>
