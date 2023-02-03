@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>QR-WEB.Link</title>
     <style>
@@ -26,20 +27,21 @@
         text-align: center;
         margin-top: 20px;
         padding: 10px;
-        background-color: white; /* White background color */
+        background-color: lightgray; /* White background color */
         border-radius: 5px;
         text-decoration: none;
-        width: 280px;
+        width: 250px;
       }
       button {
         font-size: smaller;
         text-align: center;
         margin-top: 20px;
         padding: 10px; /* Add padding to the button */
-        background-color: yellow; /* Light gray background color */
+        color: black;
+        background-color: #F5E216; /* Light gray background color */
         border-radius: 5px; /* Add border radius of 5px */
         text-decoration: none; /* Remove underline from link */
-        width: max-content; /* Set width same as image */
+        width: max-content
       }
       .error {
         color: red;
@@ -55,6 +57,7 @@
             <div class="error">{{ error_message }}</div>
         {% endif %}
         <input type="text" name="url" placeholder="Enter URL">
+        <br>
         <button type="submit">Generate QR</button>
       </form>
     </div>
