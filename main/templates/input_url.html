@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=yes,shrink-to-fit=no">
     <title>QR-WEB.Link</title>
+    <meta name="theme-color" content="rgba(50, 50, 48)">
+    {% comment %} <link rel="shortcut icon" href="{% static 'favicon.png' %}"> {% endcomment %}
+    <meta name="description" content="Free QR Web Link Code generator! Our handy tool makes it easy to create amazing quick response codes in just seconds!">
+    <meta name="keywords" content="QR, Code, Web Link,QR Generator, Free">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WHD0KYTD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5WHD0KYTD8');
+    </script>
     <style>
       /* Minimal styles */
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #333; /* Dark gray background color */
+        background-color: #505048; /* Dark gray background color */
         height: 100vh; /* 100% of viewport height */
       }
-      .center-div {
+      {% comment %} .center-div {
         padding: 5px; /* Padding of 5px */
         border-radius: 5px; /* Round edges with 5px radius */
         width: max-content; /* Width determined by content */
@@ -22,6 +35,13 @@
         top: 50%; /* Center vertically */
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%); /* Center the form */
+      } {% endcomment %}
+      .center-div {
+        padding: 5px;
+        border-radius: 5px;
+        width: max-content;
+        text-align: center;
+        margin: 20px auto;
       }
       .text-container {
         height: 100%; /* Height of 60% of viewport */
@@ -56,26 +76,26 @@
     </style>
   </head>
   <body>
-    <div class="center-div">
-      <form method="post">
-        {% csrf_token %}
-        {% if error_message %}
-            <div class="error">{{ error_message }}</div>
-        {% endif %}
-        <input type="text" name="url" placeholder="Enter URL">
-        <br>
-        <button type="submit">Generate QR</button>
-      </form>
-    </div>
     <div class="text-container">
       <h1 style="text-align: center;">
         "QR Web Link Code"
       </h1>
       <h2 style="text-align: center;">
         <small>
-          free QR, simple Link, Web with love.
+          free QR - simple Link - Web with love
         </small>
       </h2>
+      <div class="center-div">
+        <form method="post">
+          {% csrf_token %}
+          {% if error_message %}
+              <div class="error">{{ error_message }}</div>
+          {% endif %}
+          <input type="text" name="url" placeholder="Enter URL">
+          <br>
+          <button type="submit">Generate QR</button>
+        </form>
+      </div>
       <p>
         English: <br>
         Unleash the full potential of quick response codes with our free QR web link generator! Our handy tool makes it easy to create amazing quick response codes in just seconds without any budget restrictions. Say goodbye to complicated and expensive QR generators and enjoy the freedom to create quick links using QR Web Link unique codes. Experience the benefits and convenience of free QR web link building today and start shaping the future of your product at the highest level!
