@@ -1,9 +1,10 @@
 #Django setUp
-    cd .../qr-web.link
+    cd .../qr-web
     pip install virtualenv
     python3 -m virtualenv venv
     source venv/bin/activate
     pip install Django
+    pip install gunicorn
     pip install qrcode
     pip install pillow  
     python3 -m django startproject qrweb .
