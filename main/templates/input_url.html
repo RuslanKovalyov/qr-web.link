@@ -89,11 +89,14 @@
       <div class="center-div">
         <form method="post">
           {% csrf_token %}
+          <label for="id_color">background color:</label>
+          <input type="color" name="color" required id="id_color" value="#ee77ee">
+          <br>
+          <input type="text" name="url" placeholder="Enter URL">
+          <br>
           {% if error_message %}
               <div class="error">{{ error_message }}</div>
           {% endif %}
-          <input type="text" name="url" placeholder="Enter URL">
-          <br>
           <button type="submit">Generate QR</button>
         </form>
       </div>

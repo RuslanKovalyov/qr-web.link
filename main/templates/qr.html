@@ -54,7 +54,7 @@
   <body>
     <img id="transformImage" src="{% static 'qr.png' %}" alt="qr-web.link" width="220" height="40"/>
     <a href="{% static 'qr.png' %}" download>Download QR</a>
-    <a href="{% url 'generate_qr' %}">Back to generator</a>
+    <a href="{% url 'home' %}">Back to generator</a>
 
     <script>
       const transformImage = document.getElementById("transformImage");

@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import generate_qr
+from .views import home
 
 urlpatterns = [
-    path("", generate_qr, name="generate_qr"),
+    path("", home, name="home"),
 ]

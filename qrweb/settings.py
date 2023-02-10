@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ['SECRET_KEY']
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'qr-web.link', 'www.qr-web.link']
 CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1',
