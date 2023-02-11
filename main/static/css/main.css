@@ -1,0 +1,17 @@
+footer {
+    position: relative;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    margin-top: 0px;
+    padding: 5px;
+    text-align: center;
+    font-family: Georgia;
+}
+footer a {
+    color: #F5E216;
+    text-decoration: none;
+    padding-inline: 3px;
+}
+footer a:hover {
+    color: wheat;
+}

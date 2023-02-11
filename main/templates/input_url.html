@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=yes,shrink-to-fit=no">
     <title>QR-WEB.Link</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
     <meta name="theme-color" content="rgba(0, 0, 0)">
     {% comment %} <link rel="shortcut icon" href="{% static 'favicon.png' %}"> {% endcomment %}
     <meta name="description" content="Free QR Web Link Code generator! Our handy tool makes it easy to create amazing quick response codes in just seconds!">
@@ -42,12 +44,10 @@
         border-radius: 5px;
         width: max-content;
         text-align: center;
-        margin: 20px auto;
+        margin: 100px auto;
       }
       .text-container {
-        height: 100%; /* Height of 60% of viewport */
-        overflow: auto; /* Enable scrolling */
-        padding: 20px;
+        padding: 5px;
       }
       input[type="text"] {
         font-size: smaller;
@@ -100,6 +100,7 @@
           <button type="submit">Generate QR</button>
         </form>
       </div>
+      {% include 'modules/footer.html' %}
       <p>
         English: <br>
         Unleash the full potential of quick response codes with our free QR web link generator! Our handy tool makes it easy to create amazing quick response codes in just seconds without any budget restrictions. Say goodbye to complicated and expensive QR generators and enjoy the freedom to create quick links using QR Web Link unique codes. Experience the benefits and convenience of free QR web link building today and start shaping the future of your product at the highest level!
